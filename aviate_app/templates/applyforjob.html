@@ -1,0 +1,491 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Aviate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="CreativeLayers">
+    
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/chosen.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="https://kit.fontawesome.com/ec7d8e2d79.js" crossorigin="anonymous"></script>
+
+        <style>
+            #submit{
+                background-color: #00a65a;
+                color: white;
+                border: none;
+                padding: 10px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+<body>
+
+<div class="page-loading">
+	<img src="{% static 'images/loader.gif' %}" alt="" />
+</div>
+
+<div class="theme-layout" id="scrollup">
+	
+	<div class="responsive-header">
+		<div class="responsive-menubar">
+			<div class="res-logo"><a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a></div>
+			<div class="menu-resaction">
+				<div class="res-openmenu">
+					<img src="images/icon.png" alt="" /> Menu
+				</div>
+				<div class="res-closemenu">
+					<img src="images/icon2.png" alt="" /> Close
+				</div>
+			</div>
+		</div>
+		<div class="responsive-opensec">
+			<div class="btn-extars">
+				<a href="#" title="" class="post-job-btn"><i class="fa fa-plus"></i>Post Jobs</a>
+				<ul class="account-btns">
+                    <li class="signup-popup"><a title=""><i class="fa fa-key"></i> Sign Up</a></li>
+                    <li class="signin-popup"><a title=""><i class="fa fa-external-link-square"></i> Login</a></li>
+				</ul>
+			</div><!-- Btn Extras -->
+			<form class="res-search">
+				<input type="text" placeholder="Job title, keywords or company name" />
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+			<div class="responsivemenu">
+				<ul>
+						<li class="menu-item-has-children">
+							<a href="index" title="">Home</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="employeedashboard" title="">Employers</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="candidates" title="">Candidates</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#" title="">Blog</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="jobsearch?jobname=all" title="">Job</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#" title="">Pages</a>
+							
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	
+	<header class="stick-top">
+		<div class="menu-sec">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a>
+				</div><!-- Logo -->
+				<div class="btn-extars">
+					<a href="#" title="" class="post-job-btn"><i class="fa fa-plus"></i>Post Jobs</a>
+					<ul class="account-btns">
+						<li class="signup-popup"><a title=""><i class="fa fa-key"></i> Sign Up</a></li>
+						<li class="signin-popup"><a title=""><i class="fa fa-external-link-square"></i> Login</a></li>
+					</ul>
+				</div><!-- Btn Extras -->
+				<nav>
+					<ul>
+						<li class="menu-item-has-children">
+							<a href="index" title="">Home</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="employeedashboard" title="">Employers</a>
+						
+						</li>
+						<li class="menu-item-has-children">
+							<a href="candidates" title="">Candidates</a>
+						
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#" title="">Blog</a>
+							
+						</li>
+						<li class="menu-item-has-children">
+							<a href="searchjobs?jobname=all" title="">Job</a>	
+						</li>
+						<li class="menu-item-has-children">
+							<a href="#" title="">Pages</a>
+						</li>
+					</ul>
+				</nav><!-- Menus -->
+			</div>
+		</div>
+	</header>
+
+	<section class="overlape">
+		<div class="block no-padding">
+			<div data-velocity="-.1" style="background: url(../static/images/mslider1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
+			<div class="container fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="inner-header">
+							<h3>Apply For Job</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="block no-padding">
+			<div class="container">
+				 <div class="row no-gape">
+				 	
+				 	<div class="col-lg-9 column">
+				 		<div class="padding-left">
+					 		<div class="profile-title">
+					 			<h3>Apply for Job</h3>
+					 			<div style="margin-left:300px;" class="steps-sec">
+					 				<div class="step active">
+					 					<p><i class="fa fa-info"></i></p>
+					 					<span>Information</span>
+					 				</div>
+					 			</div>
+					 		</div>
+					 		<div class="profile-form-edit">
+					 			<form action="createnewapplication" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <input style="visibility: hidden;" type="text" name="jobname" required readonly value={{job.jobname}}>
+                                    <input style="visibility: hidden;" type="text" name="jobid" required readonly value={{job.id}}>
+					 				
+                                    <div class="row">
+					 				
+                                        <div class="col-lg-12">
+					 						<span class="pf-title">Enter your Full Name</span>
+					 						<div class="pf-field">
+					 							<input name="applicant_name" required type="text" placeholder="Jayant Khanna" />
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-12">
+					 						<span class="pf-title">Cover Letter</span>
+					 						<div class="pf-field">
+					 							<textarea name="coverletter" required></textarea>
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">City</span>
+					 						<div class="pf-field">
+					 							<input name="applicant_city" required type="text" />
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">State</span>
+					 						<div class="pf-field">
+					 							<input name="applicant_state" required type="text" />
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-6">
+                                            <span class="pf-title">Email</span>
+                                            <div class="pf-field">
+                                                <input name="applicant_email" required type="text" />
+                                            </div>
+					 					</div>
+					 					<div class="col-lg-6">
+                                            <span class="pf-title">Phone Number</span>
+                                            <div class="pf-field">
+                                                <input name="applicant_mobile" required type="text" />
+                                            </div>
+					 					</div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">Skills</span>
+					 						<div class="pf-field">
+                                                <input name="skills" required type="text" />
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">Qualification</span>
+					 						<div class="pf-field">
+					 							<select name="qualification" data-placeholder="Please Select Specialism" class="chosen">
+													<option value="Graduate">Graduate</option>
+													<option value="Post Graduate">Post Graduate</option>
+													<option value="High School">High School</option>
+													<option value="Currently Enrolled">Currently Enrolled</option>
+												</select>
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">Experience</span>
+					 						<div class="pf-field">
+					 							<select name="experience" data-placeholder="Please Select Specialism" class="chosen">
+													<option value="< 1 year"> < 1 year </option>
+													<option value=">1 year < 2 year"> >1 year < 2 year </option>
+													<option value=">2 year < 3 year"> >2 year < 3 year </option>
+													<option value=">3 year < 4 year"> >3 year < 4 year </option>
+													<option value=">4 year"> >4 years </option>
+												</select>
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">Gender</span>
+					 						<div class="pf-field">
+					 							<select name="gender" required data-placeholder="Please Select Specialism" class="chosen">
+													<option value="Male">Male</option>
+													<option value="Female">Female</option>
+													<option value="Other">Other</option>
+													<option value="All">All</option>
+												</select>
+					 						</div>
+					 					</div>
+					 					<div class="col-lg-12">
+					 						<span class="pf-title">Date of birth</span>
+					 						<div class="pf-field">
+					 							<input type="date" name="dob" required placeholder="01.11.207"  class="form-control datepicker" />
+					 						</div>
+					 					</div>
+                                         <div class="col-lg-12">
+                                            <span class="pf-title">Country</span>
+					 						<div class="pf-field">
+					 							<select name="country" required data-placeholder="Please Select Specialism" class="chosen">
+													<option>India</option>
+												</select>
+					 						</div>
+                                        </div>
+					 					<div class="col-lg-6">
+					 						<span class="pf-title">Upload Resume</span>
+					 						<div class="pf-field">
+					 							<input type="file" name="resume" required>
+					 						</div>
+					 					</div>
+                                         <div class="col-lg-6">
+                                            <span class="pf-title">Upload Your Image</span>
+                                            <div class="pf-field">
+                                                <input type="file" name="applicant_image" required>
+                                            </div>
+                                        </div>
+					 					<div class="col-lg-12">
+                                            <input id="submit" value="Create" type="submit">
+                                        </div>
+
+					 				</div>
+					 			</form>
+					 		</div>
+					 	</div>
+					</div>
+				 </div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 column">
+						<div class="widget">
+							<div class="about_widget">
+								<div class="logo">
+									<a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a>
+								</div>
+								<span>Collin Street West, Victor 8007, Australia.</span>
+								<span>+1 246-345-0695</span>
+								<span>info@jobhunt.com</span>
+								<div class="social">
+									<a href="#" title=""><i class="fa fa-facebook"></i></a>
+									<a href="#" title=""><i class="fa fa-twitter"></i></a>
+									<a href="#" title=""><i class="fa fa-linkedin"></i></a>
+									<a href="#" title=""><i class="fa fa-pinterest"></i></a>
+									<a href="#" title=""><i class="fa fa-behance"></i></a>
+								</div>
+							</div><!-- About Widget -->
+						</div>
+					</div>
+					<div class="col-lg-4 column">
+						<div class="widget">
+							<h3 class="footer-title">Frequently Asked Questions</h3>
+							<div class="link_widgets">
+								<div class="row">
+									<div class="col-lg-6">
+										<a href="#" title="">Privacy & Seurty </a>
+										<a href="#" title="">Terms of Serice</a>
+										<a href="#" title="">Communications </a>
+										<a href="#" title="">Referral Terms </a>
+										<a href="#" title="">Lending Licnses </a>
+										<a href="#" title="">Disclaimers </a>	
+									</div>
+									<div class="col-lg-6">
+										<a href="#" title="">Support </a>
+										<a href="#" title="">How It Works </a>
+										<a href="#" title="">For Employers </a>
+										<a href="#" title="">Underwriting </a>
+										<a href="#" title="">Contact Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 column">
+						<div class="widget">
+							<h3 class="footer-title">Find Jobs</h3>
+							<div class="link_widgets">
+								<div class="row">
+									<div class="col-lg-12">
+										<a href="#" title="">US Jobs</a>	
+										<a href="#" title="">Canada Jobs</a>	
+										<a href="#" title="">UK Jobs</a>	
+										<a href="#" title="">Emplois en Fnce</a>	
+										<a href="#" title="">Jobs in Deuts</a>	
+										<a href="#" title="">Vacatures China</a>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 column">
+						<div class="widget">
+							<div class="download_widget">
+								<a href="#" title=""><img src="images/resource/dw1.png" alt="" /></a>
+								<a href="#" title=""><img src="images/resource/dw2.png" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-line">
+			<a href="#scrollup" class="scrollup" title=""><i class="fa fa-arrow-up"></i></a>
+		</div>
+	</footer>
+
+</div>
+
+<div class="account-popup-area signin-popup-box">
+	<div class="account-popup">
+		<span class="close-popup"><i class="fa fa-close"></i></span>
+		<h3>User Login</h3>
+		<span>Click To Login With Demo User</span>
+		<div class="select-user">
+			<span>Candidate</span>
+			<span>Employer</span>
+		</div>
+		<form>
+			<div class="cfield">
+				<input type="text" placeholder="Username" />
+				<i class="fa fa-user"></i>
+			</div>
+			<div class="cfield">
+				<input type="password" placeholder="********" />
+				<i class="fa fa-key"></i>
+			</div>
+			<p class="remember-label">
+				<input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
+			</p>
+			<a href="#" title="">Forgot Password?</a>
+			<button type="submit">Login</button>
+		</form>
+		<div class="extra-login">
+			<span>Or</span>
+			<div class="login-social">
+				<a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+				<a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+	</div>
+</div><!-- LOGIN POPUP -->
+
+<div class="account-popup-area signup-popup-box">
+	<div class="account-popup">
+		<span class="close-popup"><i class="fa fa-close"></i></span>
+		<h3>Sign Up</h3>
+		<div class="select-user">
+			<span>Candidate</span>
+			<span>Employer</span>
+		</div>
+		<form>
+			<div class="cfield">
+				<input type="text" placeholder="Username" />
+				<i class="fa fa-user"></i>
+			</div>
+			<div class="cfield">
+				<input type="password" placeholder="********" />
+				<i class="fa fa-key"></i>
+			</div>
+			<div class="cfield">
+				<input type="text" placeholder="Email" />
+				<i class="fa fa-envelope-o"></i>
+			</div>
+			<div class="dropdown-field">
+				<select data-placeholder="Please Select Specialism" class="chosen">
+					<option>Web Development</option>
+					<option>Web Designing</option>
+					<option>Art & Culture</option>
+					<option>Reading & Writing</option>
+				</select>
+			</div>
+			<div class="cfield">
+				<input type="text" placeholder="Phone Number" />
+				<i class="fa fa-phone"></i>
+			</div>
+			<button type="submit">Signup</button>
+		</form>
+		<div class="extra-login">
+			<span>Or</span>
+			<div class="login-social">
+				<a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+				<a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+	</div>
+</div><!-- SIGNUP POPUP -->
+
+<script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/modernizr.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/wow.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/slick.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/parallax.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/select-chosen.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/jquery.scrollbar.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/tag.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/maps3.js' %}" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM&callback=initMap"type="text/javascript"></script>
+
+
+<!-- Include Date Range Picker -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css" />
+<script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+<script>
+		$(function(){
+			$('.datepicker').datepicker({
+			    format: 'mm-dd-yyyy'
+			});
+		});
+</script>
+
+</body>
+</html>
+
